@@ -13,6 +13,9 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { IconsProviderModule } from './icons-provider.module';
 import { NzLayoutModule } from 'ng-zorro-antd/layout';
 import { NzMenuModule } from 'ng-zorro-antd/menu';
+import { NzTableModule } from 'ng-zorro-antd/table';
+import { NzButtonModule } from 'ng-zorro-antd/button';
+
 import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { AdminComponent } from './pages/admin/admin/admin.component';
@@ -20,6 +23,7 @@ import { HomepageComponent } from './pages/outside/homepage/homepage.component';
 import { OutsideComponent } from './pages/outside/outside/outside.component';
 import { BlogPageComponent } from './pages/outside/blog-page/blog-page.component';
 import { WorksPageComponent } from './pages/outside/works-page/works-page.component';
+import { ProjectsComponent } from './pages/admin/projects/projects.component';
 
 registerLocaleData(en);
 
@@ -33,6 +37,7 @@ registerLocaleData(en);
     OutsideComponent,
     BlogPageComponent,
     WorksPageComponent,
+    ProjectsComponent,
   ],
   imports: [
     BrowserModule,
@@ -43,6 +48,8 @@ registerLocaleData(en);
     IconsProviderModule,
     NzLayoutModule,
     NzMenuModule,
+    NzTableModule,
+    NzButtonModule,
   ],
   providers: [{ provide: NZ_I18N, useValue: en_US }],
   bootstrap: [AppComponent],

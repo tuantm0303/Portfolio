@@ -1,4 +1,4 @@
-<!-- <nz-layout class="app-layout">
+<nz-layout class="app-layout">
   <nz-sider class="menu-sidebar" nzCollapsible nzWidth="256px" nzBreakpoint="md" [(nzCollapsed)]="isCollapsed"
     [nzTrigger]="null">
     <div class="sidebar-logo">
@@ -7,14 +7,14 @@
         <h1>Ant Design Of Angular</h1>
       </a>
     </div>
-    <ul nz-menu nzTheme="dark" nzMode="inline" [nzInlineCollapsed]="isCollapsed">
+    <ul class="menu-dashboard" nz-menu nzTheme="dark" nzMode="inline" [nzInlineCollapsed]="isCollapsed">
       <li nz-submenu nzOpen nzTitle="Dashboard" nzIcon="dashboard">
         <ul>
           <li nz-menu-item nzMatchRouter>
             <a routerLink="/welcome">Welcome</a>
           </li>
           <li nz-menu-item nzMatchRouter>
-            <a>Monitor</a>
+            <a routerLink="">Product</a>
           </li>
           <li nz-menu-item nzMatchRouter>
             <a>Workplace</a>
@@ -34,7 +34,7 @@
     <nz-header>
       <div class="app-header">
         <span class="header-trigger" (click)="isCollapsed = !isCollapsed">
-          <i class="trigger" nz-icon [nzType]="isCollapsed ? 'menu-unfold' : 'menu-fold'"></i>
+          <i class="trigger" nz-icon [nzType]="isCollapsed ? 'arrow-right' : 'arrow-left'" nzTheme="outline"></i>
         </span>
       </div>
     </nz-header>
@@ -44,8 +44,4 @@
       </div>
     </nz-content>
   </nz-layout>
-</nz-layout> -->
-
-<nz-content>
-  <router-outlet></router-outlet>
-</nz-content>
+</nz-layout>

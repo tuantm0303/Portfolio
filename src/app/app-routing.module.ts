@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { AdminComponent } from './pages/admin/admin/admin.component';
+import { ProjectsComponent } from './pages/admin/projects/projects.component';
 import { BlogPageComponent } from './pages/outside/blog-page/blog-page.component';
 import { HomepageComponent } from './pages/outside/homepage/homepage.component';
 import { OutsideComponent } from './pages/outside/outside/outside.component';
@@ -25,7 +26,11 @@ const routes: Routes = [
       },
     ],
   },
-  { path: 'admin', component: AdminComponent },
+  {
+    path: 'admin',
+    component: AdminComponent,
+    children: [{ path: '', component: ProjectsComponent }],
+  },
   {
     path: 'welcome',
     loadChildren: () =>

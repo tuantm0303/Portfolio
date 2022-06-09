@@ -1,0 +1,26 @@
+.app-layout {
+  height: 837px;
+}
+
+.menu-sidebar {
+  padding: 10px 0;
+}
+
+.sidebar-logo {
+  text-align: center;
+}
+
+.sidebar-logo h1 {
+  font-weight: bold;
+  color: #fff;
+  padding: 20px 0;
+}
+
+img {
+  margin: 0 auto;
+}
+
+.header-trigger {
+  color: #fff;
+  font-size: 20px;
+}

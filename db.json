@@ -1,0 +1,51 @@
+{
+  "profile": {
+    "name": "Trịnh Minh Tuấn",
+    "age": 21,
+    "position": "Dev font-end",
+    "about": "Longtime",
+    "cv": "Đã có"
+  },
+  "projects": [
+    {
+      "id": 1,
+      "name": "projects",
+      "img": "typicode",
+      "createAt": "2020",
+      "categoryProjectId": 1,
+      "short-desc": "short-desc",
+      "desc": "desc"
+    },
+    {
+      "id": 2,
+      "name": "projects 2",
+      "img": "typicode",
+      "createAt": "2022",
+      "categoryProjectId": 2,
+      "short-desc": "short-desc",
+      "desc": "desc"
+    }
+  ],
+  "categoriesProjects": [{ "id": 1, "name": "categoriesProjects" }],
+  "posts": [
+    {
+      "id": 1,
+      "title": "posts",
+      "img": "typicode",
+      "createAt": "2020",
+      "categoryPostId": 1,
+      "short-desc": "short-desc",
+      "desc": "desc"
+    },
+    {
+      "id": 2,
+      "title": "posts 2",
+      "img": "typicode",
+      "createAt": "2022",
+      "categoryPostId": 2,
+      "short-desc": "short-desc",
+      "desc": "desc"
+    }
+  ],
+  "categoriesPosts": [{ "id": 1, "name": "categoriesPosts" }]
+}

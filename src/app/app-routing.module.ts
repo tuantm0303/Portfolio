@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { AdminComponent } from './pages/admin/admin/admin.component';
+import { PostsComponent } from './pages/admin/posts/posts.component';
 import { ProjectsComponent } from './pages/admin/projects/projects.component';
 import { BlogPageComponent } from './pages/outside/blog-page/blog-page.component';
 import { HomepageComponent } from './pages/outside/homepage/homepage.component';
@@ -29,7 +30,10 @@ const routes: Routes = [
   {
     path: 'admin',
     component: AdminComponent,
-    children: [{ path: '', component: ProjectsComponent }],
+    children: [
+      { path: '', component: ProjectsComponent },
+      { path: 'posts', component: PostsComponent },
+    ],
   },
   {
     path: 'welcome',

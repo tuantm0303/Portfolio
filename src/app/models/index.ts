@@ -1,4 +1,5 @@
 export interface Profile {
+  id: number;
   name: string;
   age: number;
   position: string;
@@ -7,6 +8,7 @@ export interface Profile {
 }
 
 export interface Project {
+  id: number;
   name: string;
   img: string;
   createAt: string;
@@ -16,10 +18,12 @@ export interface Project {
 }
 
 export interface CategoryProject {
+  id: number;
   name: string;
 }
 
-export interface Posts {
+export interface Post {
+  id: number;
   title: string;
   img: string;
   createAt: string;
@@ -29,5 +33,6 @@ export interface Posts {
 }
 
 export interface categoryPost {
+  id: number;
   name: string;
 }

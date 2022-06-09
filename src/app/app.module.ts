@@ -24,6 +24,7 @@ import { OutsideComponent } from './pages/outside/outside/outside.component';
 import { BlogPageComponent } from './pages/outside/blog-page/blog-page.component';
 import { WorksPageComponent } from './pages/outside/works-page/works-page.component';
 import { ProjectsComponent } from './pages/admin/projects/projects.component';
+import { PostsComponent } from './pages/admin/posts/posts.component';
 
 registerLocaleData(en);
 
@@ -38,6 +39,7 @@ registerLocaleData(en);
     BlogPageComponent,
     WorksPageComponent,
     ProjectsComponent,
+    PostsComponent,
   ],
   imports: [
     BrowserModule,

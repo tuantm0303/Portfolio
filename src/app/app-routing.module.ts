@@ -3,7 +3,8 @@ import { Routes, RouterModule } from '@angular/router';
 import { AdminComponent } from './pages/admin/admin/admin.component';
 import { PostsFormComponent } from './pages/admin/post/posts-form/posts-form.component';
 import { PostsComponent } from './pages/admin/post/posts/posts.component';
-import { ProjectsComponent } from './pages/admin/projects/projects.component';
+import { ProjectsFormComponent } from './pages/admin/project/projects-form/projects-form.component';
+import { ProjectsComponent } from './pages/admin/project/projects/projects.component';
 import { BlogPageComponent } from './pages/outside/blog-page/blog-page.component';
 import { HomepageComponent } from './pages/outside/homepage/homepage.component';
 import { OutsideComponent } from './pages/outside/outside/outside.component';
@@ -32,7 +33,14 @@ const routes: Routes = [
     path: 'admin',
     component: AdminComponent,
     children: [
-      { path: '', component: ProjectsComponent },
+      {
+        path: 'projects',
+        children: [
+          { path: '', component: ProjectsComponent },
+          { path: 'add', component: ProjectsFormComponent },
+          { path: 'edit/:id', component: ProjectsFormComponent },
+        ],
+      },
       {
         path: 'posts',
         children: [

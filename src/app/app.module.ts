@@ -24,9 +24,10 @@ import { HomepageComponent } from './pages/outside/homepage/homepage.component';
 import { OutsideComponent } from './pages/outside/outside/outside.component';
 import { BlogPageComponent } from './pages/outside/blog-page/blog-page.component';
 import { WorksPageComponent } from './pages/outside/works-page/works-page.component';
-import { ProjectsComponent } from './pages/admin/projects/projects.component';
+import { ProjectsComponent } from './pages/admin/project/projects/projects.component';
 import { PostsComponent } from './pages/admin/post/posts/posts.component';
 import { PostsFormComponent } from './pages/admin/post/posts-form/posts-form.component';
+import { ProjectsFormComponent } from './pages/admin/project/projects-form/projects-form.component';
 
 registerLocaleData(en);
 
@@ -41,6 +42,7 @@ registerLocaleData(en);
     BlogPageComponent,
     WorksPageComponent,
     ProjectsComponent,
+    ProjectsFormComponent,
     PostsComponent,
     PostsFormComponent,
   ],

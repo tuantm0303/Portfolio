@@ -1,0 +1,43 @@
+<div class="container">
+  <div class="btn-click">
+    <a class="back" routerLink="../"><i nz-icon nzType="rollback" nzTheme="outline"></i></a>
+  </div>
+  <form nz-form (ngSubmit)="submitForm()">
+    <nz-form-item>
+      <nz-form-label [nzSpan]="6" nzFor="name">Name</nz-form-label>
+      <nz-form-control [nzSpan]="14">
+        <input nz-input name="name" type="text" id="title" [(ngModel)]="project.name">
+      </nz-form-control>
+    </nz-form-item>
+    <nz-form-item>
+      <nz-form-label [nzSpan]="6" nzFor="img">Images</nz-form-label>
+      <nz-form-control [nzSpan]="14">
+        <input nz-input name="img" type="text" id="img" [(ngModel)]="project.img">
+      </nz-form-control>
+    </nz-form-item>
+    <nz-form-item>
+      <nz-form-label [nzSpan]="6" nzFor="categoryProjectId">Category Post</nz-form-label>
+      <nz-form-control [nzSpan]="14">
+        <input nz-input name="categoryProjectId" type="number" id="categoryProjectId"
+          [(ngModel)]="project.categoryProjectId">
+      </nz-form-control>
+    </nz-form-item>
+    <nz-form-item>
+      <nz-form-label [nzSpan]="6" nzFor="short_desc">Short Description</nz-form-label>
+      <nz-form-control [nzSpan]="14">
+        <input nz-input name="short_desc" type="text" id="short_desc" [(ngModel)]="project.short_desc">
+      </nz-form-control>
+    </nz-form-item>
+    <nz-form-item>
+      <nz-form-label [nzSpan]="6" nzFor="desc">Description</nz-form-label>
+      <nz-form-control [nzSpan]="14">
+        <input nz-input name="desc" type="text" id="desc" [(ngModel)]="project.desc">
+      </nz-form-control>
+    </nz-form-item>
+    <div class="btn-click">
+      <button nz-button nzType="primary" nzSize="large" nzAlign="end">
+        Submit
+      </button>
+    </div>
+  </form>
+</div>

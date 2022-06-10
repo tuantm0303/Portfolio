@@ -11,7 +11,8 @@ export interface Project {
   id: number;
   name: string;
   img: string;
-  createAt: string;
+  createdAt: Date;
+  updatedAt: Date;
   categoryProjectId: string;
   short_desc: string;
   desc: string;
@@ -26,7 +27,8 @@ export interface Post {
   id: number;
   title: string;
   img: string;
-  createAt: string;
+  createdAt: Date;
+  updatedAt: Date;
   categoryPostId: string;
   short_desc: string;
   desc: string;

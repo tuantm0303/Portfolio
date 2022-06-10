@@ -1,0 +1,43 @@
+<div class="container">
+  <router-outlet></router-outlet>
+  <button routerLink="add" class="btn-add" nz-button nzType="primary" nzSize="large" nzAlign="end">
+    <i nz-icon nzType="file-add" nzTheme="outline"></i>
+    Add
+  </button>
+  <nz-table #basicTable>
+    <thead>
+      <tr>
+        <th class="title-name">STT</th>
+        <th class="title-name">Title</th>
+        <th class="title-name">Images</th>
+        <th class="title-name">Created At</th>
+        <th class="title-name">Category Posts</th>
+        <th class="title-name">Short Description</th>
+        <th class="title-name">Description</th>
+        <th class="title-name">Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let item of posts; let i = index">
+        <td>{{i + 1}}</td>
+        <td>{{item.title}}</td>
+        <td><img src={{item.img}} alt={{item.title}}></td>
+        <td>{{item.createdAt}}</td>
+        <td>{{item.categoryPostId}}</td>
+        <td>{{item.short_desc}}</td>
+        <td>{{item.desc}}</td>
+        <td>
+          <button routerLink="edit/{{item.id}}" class="btn-edit" nz-button nzType="primary" nzSuccess>
+            <i nz-icon nzType="edit" nzTheme="outline"></i>
+            Edit
+          </button>
+          <button (click)="onRemove(item.id)" class="btn-delete" nz-button nzType="primary" nzDanger>
+            <i nz-icon nzType="delete" nzTheme="outline"></i>
+            Delete
+          </button>
+          <button class="btn-detail" nz-button nzType="primary">Detail</button>
+        </td>
+      </tr>
+    </tbody>
+  </nz-table>
+</div>

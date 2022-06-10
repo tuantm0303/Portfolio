@@ -13,7 +13,7 @@
       "img": "typicode",
       "createAt": "2020",
       "categoryProjectId": 1,
-      "short-desc": "short-desc",
+      "short_desc": "short_desc",
       "desc": "desc"
     },
     {
@@ -22,30 +22,53 @@
       "img": "typicode",
       "createAt": "2022",
       "categoryProjectId": 2,
-      "short-desc": "short-desc",
+      "short_desc": "short_desc",
       "desc": "desc"
     }
   ],
-  "categoriesProjects": [{ "id": 1, "name": "categoriesProjects" }],
+  "categoriesProjects": [
+    {
+      "id": 1,
+      "name": "categoriesProjects"
+    }
+  ],
   "posts": [
     {
       "id": 1,
-      "title": "posts",
-      "img": "typicode",
-      "createAt": "2020",
+      "title": "post",
+      "img": "https://picsum.photos/200/100",
+      "createdAt": "2022-06-09T16:02:46.958Z",
       "categoryPostId": 1,
-      "short-desc": "short-desc",
-      "desc": "desc"
+      "short_desc": "short",
+      "desc": "description"
+    },
+    {
+      "id": 4,
+      "title": "post 1,5",
+      "img": "https://picsum.photos/200/100",
+      "createdAt": "2022-06-09T16:02:46.958Z",
+      "categoryPostId": 1,
+      "short_desc": "short",
+      "desc": "description"
     },
     {
       "id": 2,
-      "title": "posts 2",
-      "img": "typicode",
-      "createAt": "2022",
+      "title": "post 2",
+      "img": "https://picsum.photos/200/100",
+      "createdAt": "2022-06-09T16:02:46.958Z",
       "categoryPostId": 2,
-      "short-desc": "short-desc",
-      "desc": "desc"
+      "short_desc": "short 2",
+      "desc": "description 2 sffa"
     }
   ],
-  "categoriesPosts": [{ "id": 1, "name": "categoriesPosts" }]
+  "categoriesPosts": [
+    {
+      "id": 1,
+      "name": "categoriesPosts 1"
+    },
+    {
+      "id": 2,
+      "name": "categoriesPosts 2"
+    }
+  ]
 }

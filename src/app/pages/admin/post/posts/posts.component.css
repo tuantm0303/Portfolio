@@ -1,0 +1,17 @@
+.container {
+  padding: 40px;
+}
+
+.btn-add {
+  margin-bottom: 10px;
+}
+
+.btn-edit,
+.btn-delete,
+.btn-detail {
+  margin: 0 5px;
+}
+
+.title-name {
+  text-align: center;
+}

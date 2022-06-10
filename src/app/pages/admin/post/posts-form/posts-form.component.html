@@ -1,0 +1,48 @@
+<div class="container">
+  <div class="btn-click">
+    <a class="back" routerLink="../"><i nz-icon nzType="rollback" nzTheme="outline"></i></a>
+  </div>
+  <form nz-form (ngSubmit)="submitForm()">
+    <nz-form-item>
+      <nz-form-label [nzSpan]="6" nzFor="title">Title</nz-form-label>
+      <nz-form-control [nzSpan]="14">
+        <input nz-input name="title" type="text" id="title" [(ngModel)]="post.title">
+      </nz-form-control>
+    </nz-form-item>
+    <nz-form-item>
+      <nz-form-label [nzSpan]="6" nzFor="img">Images</nz-form-label>
+      <nz-form-control [nzSpan]="14">
+        <input nz-input name="img" type="text" id="img" [(ngModel)]="post.img">
+      </nz-form-control>
+    </nz-form-item>
+    <!-- <nz-form-item>
+      <nz-form-label [nzSpan]="6" nzFor="createAt">CreateAt</nz-form-label>
+      <nz-form-control [nzSpan]="14">
+        <input nz-input name="createAt" type="date" id="createAt" [(ngModel)]="post.createAt">
+      </nz-form-control>
+    </nz-form-item> -->
+    <nz-form-item>
+      <nz-form-label [nzSpan]="6" nzFor="categoryPostId">Category Post</nz-form-label>
+      <nz-form-control [nzSpan]="14">
+        <input nz-input name="categoryPostId" type="number" id="categoryPostId" [(ngModel)]="post.categoryPostId">
+      </nz-form-control>
+    </nz-form-item>
+    <nz-form-item>
+      <nz-form-label [nzSpan]="6" nzFor="short_desc">Short Description</nz-form-label>
+      <nz-form-control [nzSpan]="14">
+        <input nz-input name="short_desc" type="text" id="short_desc" [(ngModel)]="post.short_desc">
+      </nz-form-control>
+    </nz-form-item>
+    <nz-form-item>
+      <nz-form-label [nzSpan]="6" nzFor="desc">Description</nz-form-label>
+      <nz-form-control [nzSpan]="14">
+        <input nz-input name="desc" type="text" id="desc" [(ngModel)]="post.desc">
+      </nz-form-control>
+    </nz-form-item>
+    <div class="btn-click">
+      <button nz-button nzType="primary" nzSize="large" nzAlign="end">
+        Submit
+      </button>
+    </div>
+  </form>
+</div>

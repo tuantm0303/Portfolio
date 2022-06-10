@@ -17,6 +17,16 @@ export class PostsComponent implements OnInit {
   }
 
   onGetList() {
-    this.postService.getPosts().subscribe((data) => console.log(data));
+    this.postService.getPosts().subscribe((data) => {
+      this.posts = data;
+    });
+  }
+
+  onRemove(id: number | string) {
+    if (window.confirm('Are you sure delete project??')) {
+      this.postService.removePost(id).subscribe(() => {
+        this.onGetList();
+      });
+    }
   }
 }

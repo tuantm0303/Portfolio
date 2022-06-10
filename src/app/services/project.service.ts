@@ -18,6 +18,10 @@ export class ProjectService {
     return this.http.get<Project>(`${apiUrl}/${id}`);
   }
 
+  getProjectLimit(page: number, limit: number) {
+    return this.http.get<Project[]>(`${apiUrl}?_page=${page}&_limit=${limit}`);
+  }
+
   removeProject(id: number | string) {
     return this.http.delete<Project>(`${apiUrl}/${id}`);
   }

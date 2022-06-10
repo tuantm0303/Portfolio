@@ -2,6 +2,11 @@
   height: 837px;
 }
 
+.app-header {
+  display: flex;
+  justify-content: space-between;
+}
+
 .menu-sidebar {
   padding: 10px 0;
 }

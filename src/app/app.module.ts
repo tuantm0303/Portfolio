@@ -28,6 +28,8 @@ import { ProjectsComponent } from './pages/admin/project/projects/projects.compo
 import { PostsComponent } from './pages/admin/post/posts/posts.component';
 import { PostsFormComponent } from './pages/admin/post/posts-form/posts-form.component';
 import { ProjectsFormComponent } from './pages/admin/project/projects-form/projects-form.component';
+import { ProfileComponent } from './pages/admin/profile/profile/profile.component';
+import { ProfileFormComponent } from './pages/admin/profile/profile-form/profile-form.component';
 
 registerLocaleData(en);
 
@@ -41,6 +43,8 @@ registerLocaleData(en);
     OutsideComponent,
     BlogPageComponent,
     WorksPageComponent,
+    ProfileComponent,
+    ProfileFormComponent,
     ProjectsComponent,
     ProjectsFormComponent,
     PostsComponent,

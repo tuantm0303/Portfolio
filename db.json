@@ -1,10 +1,10 @@
 {
   "profile": {
-    "name": "Trịnh Minh Tuấn",
+    "fullname": "Trịnh Minh Tuấn",
     "age": 21,
-    "position": "Dev font-end",
-    "about": "Longtime",
-    "cv": "Đã có"
+    "position": "Developer Frontend",
+    "about": "Long-time",
+    "cv": "Already have"
   },
   "projects": [
     {

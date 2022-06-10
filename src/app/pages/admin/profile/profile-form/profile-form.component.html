@@ -1,0 +1,42 @@
+<div class="container">
+  <div class="btn-click">
+    <a class="back" routerLink="../"><i nz-icon nzType="rollback" nzTheme="outline"></i></a>
+  </div>
+  <form nz-form (ngSubmit)="submitForm()">
+    <nz-form-item>
+      <nz-form-label [nzSpan]="6" nzFor="fullname">Fullname</nz-form-label>
+      <nz-form-control [nzSpan]="14">
+        <input nz-input name="fullname" type="text" id="fullname" [(ngModel)]="profile.fullname">
+      </nz-form-control>
+    </nz-form-item>
+    <nz-form-item>
+      <nz-form-label [nzSpan]="6" nzFor="age">Age</nz-form-label>
+      <nz-form-control [nzSpan]="14">
+        <input nz-input name="age" type="number" id="age" [(ngModel)]="profile.age">
+      </nz-form-control>
+    </nz-form-item>
+    <nz-form-item>
+      <nz-form-label [nzSpan]="6" nzFor="position">Position</nz-form-label>
+      <nz-form-control [nzSpan]="14">
+        <input nz-input name="position" type="text" id="position" [(ngModel)]="profile.position">
+      </nz-form-control>
+    </nz-form-item>
+    <nz-form-item>
+      <nz-form-label [nzSpan]="6" nzFor="about">About</nz-form-label>
+      <nz-form-control [nzSpan]="14">
+        <input nz-input name="about" type="text" id="about" [(ngModel)]="profile.about">
+      </nz-form-control>
+    </nz-form-item>
+    <nz-form-item>
+      <nz-form-label [nzSpan]="6" nzFor="cv">CV</nz-form-label>
+      <nz-form-control [nzSpan]="14">
+        <input nz-input name="cv" type="text" id="cv" [(ngModel)]="profile.cv">
+      </nz-form-control>
+    </nz-form-item>
+    <div class="btn-click">
+      <button nz-button nzType="primary" nzSize="large" nzAlign="end">
+        Submit
+      </button>
+    </div>
+  </form>
+</div>

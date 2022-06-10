@@ -1,0 +1,50 @@
+.container {
+  padding: 80px;
+}
+
+.profile {
+  display: flex;
+  width: 100%;
+  padding: 40px;
+  justify-content: center;
+}
+
+.infor {
+  display: flex;
+  padding: 20px;
+}
+
+.row {
+  display: flex;
+}
+
+.col {
+  padding: 10px;
+}
+
+.fullname,
+.age {
+  font-size: 30px;
+  font-weight: bolder;
+  padding-bottom: 20px;
+}
+
+.fullname:hover,
+.age:hover {
+  color: #dc3b3b;
+}
+
+.position,
+.about,
+.cv {
+  font-size: 20px;
+  padding-bottom: 10px;
+}
+
+.avatar {
+  padding: 10px;
+}
+
+.btn-edit {
+  float: right;
+}

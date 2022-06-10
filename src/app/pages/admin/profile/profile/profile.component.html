@@ -1,0 +1,28 @@
+<div class="container">
+  <div class="profile">
+    <div class="infor">
+      <div class="row">
+        <div class="col">
+          <div class="fullname">FullName: {{profile.fullname}}</div>
+          <div class="about">About: {{profile.about}}</div>
+          <div class="position">Position: {{profile.position}}</div>
+        </div>
+        <div class="col">
+          <div class="age">Age: {{profile.age}}</div>
+          <div class="cv">CV: {{profile.cv}}</div>
+        </div>
+      </div>
+    </div>
+    <div class="avatar">
+      <img
+        src="https://yt3.ggpht.com/FNxu8jZbaIZFzxxPZtsTs_H9PZzWHxUhvCe28nqNQc-Le4SoT3krUtLZIN4p-_wNp6EevvDjnqc=s176-c-k-c0x00ffffff-no-rj"
+        alt="">
+    </div>
+  </div>
+  <div class="btn-edit">
+    <button routerLink="edit" class="btn-edit" nz-button nzType="primary" nzSuccess>
+      <i nz-icon nzType="edit" nzTheme="outline"></i>
+      Edit
+    </button>
+  </div>
+</div>

@@ -10,7 +10,7 @@
     {
       "id": 1,
       "name": "projects",
-      "img": "typicode",
+      "img": "https://picsum.photos/500/500",
       "createAt": "2020",
       "categoryProjectId": 1,
       "short_desc": "short_desc",
@@ -19,7 +19,26 @@
     {
       "id": 2,
       "name": "Project update",
-      "img": "arnh",
+      "img": "https://picsum.photos/500/500",
+      "createdAt": "2022-06-10T04:16:28.672Z",
+      "updatedAt": "2022-06-10T04:16:28.672Z",
+      "categoryProjectId": 1,
+      "short_desc": "hahha",
+      "desc": "hahahahhahahha"
+    },
+    {
+      "id": 3,
+      "name": "projects qưeg",
+      "img": "https://picsum.photos/500/500",
+      "createAt": "2020",
+      "categoryProjectId": 3,
+      "short_desc": "short_desc",
+      "desc": "desc"
+    },
+    {
+      "id": 4,
+      "name": "Project update sádfs",
+      "img": "https://picsum.photos/500/500",
       "createdAt": "2022-06-10T04:16:28.672Z",
       "updatedAt": "2022-06-10T04:16:28.672Z",
       "categoryProjectId": 1,
@@ -27,7 +46,7 @@
       "desc": "hahahahhahahha"
     }
   ],
-  "categoriesProjects": [
+  "categoryProjects": [
     {
       "id": 1,
       "name": "categoriesProjects"
@@ -66,7 +85,7 @@
       "desc": "description 2 sffa"
     }
   ],
-  "categoriesPosts": [
+  "categoryPosts": [
     {
       "id": 1,
       "name": "categoriesPosts 1"

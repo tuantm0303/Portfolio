@@ -75,23 +75,24 @@
   <div class="max-w-4xl mx-auto px-5">
     <div class="row flex justify-between h-[60px]">
       <h3 class="title-recent text-xl text-[#21243D] leading-[60px]">Featured works</h3>
-      <!-- <a href="#" class="view-all text-sm text-[#00A8CC] leading-[60px]">view all</a> -->
+      <a routerLink="works" class="view-all text-sm text-[#00A8CC] leading-[60px] hover:underline">view all</a>
     </div>
 
-    <div *ngFor="let project of projects" class="show-featrured grid grid-cols-[180px,auto] gap-4 py-10">
-      <img src="https://picsum.photos/500/500" alt=""
-        class="img-featrured rounded-md h-[180px] w-[246px] hover:opacity-80">
-      <div class="desc-featrured">
-        <h2
-          class="title-featrured text-[30px] leading-[44px] font-bold h-[44px] w-[305px] text-[#21243D] hover:text-[#FF6464] hover:cursor-pointer">
-          {{project.name}}</h2>
-        <div class="year-and-category flex justify-start py-4">
-          <span class="createdAt rounded-3xl bg-[#21243D] px-5 text-white text-sm w-fit">{{project.createdAt}}</span>
-          <span class="category-featrured text-[#8695A4] pl-2 text-sm">{{project.categoryProjectId}}</span>
+    <div *ngFor="let project of projects" class="show-featrured py-10">
+      <a routerLink="" class="project-links grid grid-cols-[180px,auto] gap-4">
+        <img src={{project.img}} alt={{project.name}}
+          class="img-featrured rounded-md h-[180px] w-[246px] hover:opacity-80">
+        <div class="desc-featrured">
+          <h2
+            class="title-featrured text-[30px] leading-[44px] font-bold h-[44px] w-[305px] text-[#21243D] hover:text-[#FF6464] hover:cursor-pointer">
+            {{project.name}}</h2>
+          <div class="year-and-category flex justify-start py-4">
+            <span class="createdAt rounded-3xl bg-[#21243D] px-5 text-white text-sm w-fit">{{project.createdAt}}</span>
+            <span class="category-featrured text-[#8695A4] pl-2 text-sm">{{project.categoryProjectId}}</span>
+          </div>
+          <p class="desc-featrured text-base text-[#21243D] leading-6">{{project.desc}}</p>
         </div>
-        <p class="desc-featrured text-base text-[#21243D] leading-6">{{project.desc}}</p>
-      </div>
+      </a>
     </div>
   </div>
 </section>
-<router-outlet></router-outlet>

@@ -27,15 +27,6 @@
       "desc": "hahahahhahahha"
     },
     {
-      "id": 3,
-      "name": "projects qưeg",
-      "img": "https://picsum.photos/500/500",
-      "createAt": "2020",
-      "categoryProjectId": 3,
-      "short_desc": "short_desc",
-      "desc": "desc"
-    },
-    {
       "id": 4,
       "name": "Project update sádfs",
       "img": "https://picsum.photos/500/500",
@@ -93,6 +84,10 @@
     {
       "id": 2,
       "name": "ádasdasdas ádfsdgd"
+    },
+    {
+      "id": 3,
+      "name": "fsdfersd"
     }
   ]
 }

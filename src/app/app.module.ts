@@ -16,6 +16,7 @@ import { NzMenuModule } from 'ng-zorro-antd/menu';
 import { NzTableModule } from 'ng-zorro-antd/table';
 import { NzButtonModule } from 'ng-zorro-antd/button';
 import { NzFormModule } from 'ng-zorro-antd/form';
+import { NzAlertModule } from 'ng-zorro-antd/alert';
 
 import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
@@ -72,6 +73,7 @@ registerLocaleData(en);
     NzTableModule,
     NzButtonModule,
     NzFormModule,
+    NzAlertModule,
     ReactiveFormsModule,
   ],
   providers: [{ provide: NZ_I18N, useValue: en_US }],

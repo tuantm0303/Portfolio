@@ -2,15 +2,26 @@
   <div class="btn-click">
     <a class="back" routerLink="../"><i nz-icon nzType="rollback" nzTheme="outline"></i></a>
   </div>
-  <form nz-form (ngSubmit)="submitForm()">
+  <form #formSubmit="ngForm" nz-form (ngSubmit)="submitForm()">
     <nz-form-item>
       <nz-form-label [nzSpan]="6" nzFor="name">Name</nz-form-label>
       <nz-form-control [nzSpan]="14">
-        <input nz-input name="name" type="text" id="name" [(ngModel)]="cateProject.name">
+        <input nz-input name="name" type="text" id="name" [(ngModel)]="cateProject.name" #name="ngModel" required
+          minlength="5">
       </nz-form-control>
+
+      <!-- validation -->
+      <div class="alert pl-2">
+        <div *ngIf="name.errors?.['required'] && (name.dirty || name.touched)" class="alert-required">
+          <nz-alert nzType="error" nzMessage="This is required"></nz-alert>
+        </div>
+        <div *ngIf="name.errors?.['minlength'] && (name.dirty || name.touched)" class="alert-minlenght">
+          <nz-alert nzType="error" nzMessage="Lenght > 5"></nz-alert>
+        </div>
+      </div>
     </nz-form-item>
     <div class="btn-click">
-      <button nz-button nzType="primary" nzSize="large" nzAlign="end">
+      <button [disabled]="!formSubmit.valid" nz-button nzType="primary" nzSize="large" nzAlign="end">
         Submit
       </button>
     </div>

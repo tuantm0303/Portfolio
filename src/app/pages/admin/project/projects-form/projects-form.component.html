@@ -2,40 +2,75 @@
   <div class="btn-click">
     <a class="back" routerLink="../"><i nz-icon nzType="rollback" nzTheme="outline"></i></a>
   </div>
-  <form nz-form (ngSubmit)="submitForm()">
+  <form #formSubmit="ngForm" nz-form (ngSubmit)="submitForm()">
     <nz-form-item>
       <nz-form-label [nzSpan]="6" nzFor="name">Name</nz-form-label>
       <nz-form-control [nzSpan]="14">
-        <input nz-input name="name" type="text" id="title" [(ngModel)]="project.name">
+        <input nz-input name="name" type="text" id="name" [(ngModel)]="project.name" #name="ngModel" required
+          minlength="5">
       </nz-form-control>
+      <!-- validation -->
+      <div class="alert pl-2">
+        <div *ngIf="name.errors?.['required'] && (name.dirty || name.touched)" class="alert-required">
+          <nz-alert nzType="error" nzMessage="This is required"></nz-alert>
+        </div>
+        <div *ngIf="name.errors?.['minlength'] && (name.dirty || name.touched)" class="alert-minlength">
+          <nz-alert nzType="error" nzMessage="Lenght > 5"></nz-alert>
+        </div>
+      </div>
     </nz-form-item>
     <nz-form-item>
       <nz-form-label [nzSpan]="6" nzFor="img">Images</nz-form-label>
       <nz-form-control [nzSpan]="14">
-        <input nz-input name="img" type="text" id="img" [(ngModel)]="project.img">
+        <input nz-input name="img" type="text" id="img" [(ngModel)]="project.img" #name="ngModel" required>
       </nz-form-control>
+      <!-- validation -->
+      <div class="alert pl-2">
+        <div *ngIf="name.errors?.['required'] && (name.dirty || name.touched)" class="alert-required">
+          <nz-alert nzType="error" nzMessage="This is required"></nz-alert>
+        </div>
+      </div>
     </nz-form-item>
     <nz-form-item>
       <nz-form-label [nzSpan]="6" nzFor="categoryProjectId">Category Post</nz-form-label>
       <nz-form-control [nzSpan]="14">
         <input nz-input name="categoryProjectId" type="number" id="categoryProjectId"
-          [(ngModel)]="project.categoryProjectId">
+          [(ngModel)]="project.categoryProjectId" #name="ngModel" required>
       </nz-form-control>
+      <!-- validation -->
+      <div class="alert pl-2">
+        <div *ngIf="name.errors?.['required'] && (name.dirty || name.touched)" class="alert-required">
+          <nz-alert nzType="error" nzMessage="This is required"></nz-alert>
+        </div>
+      </div>
     </nz-form-item>
     <nz-form-item>
       <nz-form-label [nzSpan]="6" nzFor="short_desc">Short Description</nz-form-label>
       <nz-form-control [nzSpan]="14">
-        <input nz-input name="short_desc" type="text" id="short_desc" [(ngModel)]="project.short_desc">
+        <input nz-input name="short_desc" type="text" id="short_desc" [(ngModel)]="project.short_desc" #name="ngModel"
+          required>
       </nz-form-control>
+      <!-- validation -->
+      <div class="alert pl-2">
+        <div *ngIf="name.errors?.['required'] && (name.dirty || name.touched)" class="alert-required">
+          <nz-alert nzType="error" nzMessage="This is required"></nz-alert>
+        </div>
+      </div>
     </nz-form-item>
     <nz-form-item>
       <nz-form-label [nzSpan]="6" nzFor="desc">Description</nz-form-label>
       <nz-form-control [nzSpan]="14">
-        <input nz-input name="desc" type="text" id="desc" [(ngModel)]="project.desc">
+        <input nz-input name="desc" type="text" id="desc" [(ngModel)]="project.desc" #name="ngModel" required>
       </nz-form-control>
+      <!-- validation -->
+      <div class="alert pl-2">
+        <div *ngIf="name.errors?.['required'] && (name.dirty || name.touched)" class="alert-required">
+          <nz-alert nzType="error" nzMessage="This is required"></nz-alert>
+        </div>
+      </div>
     </nz-form-item>
     <div class="btn-click">
-      <button nz-button nzType="primary" nzSize="large" nzAlign="end">
+      <button [disabled]="!formSubmit.valid" nz-button nzType="primary" nzSize="large" nzAlign="end">
         Submit
       </button>
     </div>

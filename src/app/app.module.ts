@@ -34,6 +34,7 @@ import { CategoryProjectsComponent } from './pages/admin/category-project/catego
 import { CategoryProjectsFormComponent } from './pages/admin/category-project/category-projects-form/category-projects-form.component';
 import { CategoryPostsComponent } from './pages/admin/category-post/category-posts/category-posts.component';
 import { CategoryPostsFormComponent } from './pages/admin/category-post/category-posts-form/category-posts-form.component';
+import { DetailWorkPageComponent } from './pages/outside/detail-work-page/detail-work-page.component';
 
 registerLocaleData(en);
 
@@ -57,6 +58,7 @@ registerLocaleData(en);
     CategoryProjectsFormComponent,
     CategoryPostsComponent,
     CategoryPostsFormComponent,
+    DetailWorkPageComponent,
   ],
   imports: [
     BrowserModule,

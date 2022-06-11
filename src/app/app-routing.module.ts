@@ -12,6 +12,7 @@ import { ProfileComponent } from './pages/admin/profile/profile/profile.componen
 import { ProjectsFormComponent } from './pages/admin/project/projects-form/projects-form.component';
 import { ProjectsComponent } from './pages/admin/project/projects/projects.component';
 import { BlogPageComponent } from './pages/outside/blog-page/blog-page.component';
+import { DetailWorkPageComponent } from './pages/outside/detail-work-page/detail-work-page.component';
 import { HomepageComponent } from './pages/outside/homepage/homepage.component';
 import { OutsideComponent } from './pages/outside/outside/outside.component';
 import { WorksPageComponent } from './pages/outside/works-page/works-page.component';
@@ -32,6 +33,10 @@ const routes: Routes = [
       {
         path: 'blog',
         component: BlogPageComponent,
+      },
+      {
+        path: 'works/detail/:id',
+        component: DetailWorkPageComponent,
       },
     ],
   },

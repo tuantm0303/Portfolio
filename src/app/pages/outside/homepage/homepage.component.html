@@ -79,7 +79,7 @@
     </div>
 
     <div *ngFor="let project of projects" class="show-featrured py-10">
-      <a routerLink="" class="project-links grid grid-cols-[180px,auto] gap-4">
+      <a routerLink="works/detail/{{project.id}}" class="project-links grid grid-cols-[180px,auto] gap-4">
         <img src={{project.img}} alt={{project.name}}
           class="img-featrured rounded-md h-[180px] w-[246px] hover:opacity-80">
         <div class="desc-featrured">

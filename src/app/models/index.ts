@@ -34,7 +34,7 @@ export interface Post {
   desc: string;
 }
 
-export interface categoryPost {
+export interface CategoryPost {
   id: number;
   name: string;
 }

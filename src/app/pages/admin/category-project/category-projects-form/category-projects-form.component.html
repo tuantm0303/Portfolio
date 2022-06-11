@@ -1,0 +1,18 @@
+<div class="container">
+  <div class="btn-click">
+    <a class="back" routerLink="../"><i nz-icon nzType="rollback" nzTheme="outline"></i></a>
+  </div>
+  <form nz-form (ngSubmit)="submitForm()">
+    <nz-form-item>
+      <nz-form-label [nzSpan]="6" nzFor="name">Name</nz-form-label>
+      <nz-form-control [nzSpan]="14">
+        <input nz-input name="name" type="text" id="name" [(ngModel)]="cateProject.name">
+      </nz-form-control>
+    </nz-form-item>
+    <div class="btn-click">
+      <button nz-button nzType="primary" nzSize="large" nzAlign="end">
+        Submit
+      </button>
+    </div>
+  </form>
+</div>

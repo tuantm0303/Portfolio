@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { categoryPost } from '../models';
+import { CategoryPost } from '../models';
 
 const apiUrl = 'http://localhost:3000/categoriesPosts';
 
@@ -11,22 +11,22 @@ export class CategoryPostService {
   constructor(private http: HttpClient) {}
 
   getAll() {
-    return this.http.get<categoryPost[]>(apiUrl);
+    return this.http.get<CategoryPost[]>(apiUrl);
   }
 
-  getOne(id: categoryPost) {
-    return this.http.get<categoryPost[]>(`${apiUrl}/${id}`);
+  getOne(id: CategoryPost) {
+    return this.http.get<CategoryPost>(`${apiUrl}/${id}`);
   }
 
   remove(id: number | string) {
-    return this.http.delete<categoryPost[]>(`${apiUrl}/${id}`);
+    return this.http.delete<CategoryPost>(`${apiUrl}/${id}`);
   }
 
-  create(cate: categoryPost) {
-    return this.http.post<categoryPost[]>(`${apiUrl}`, cate);
+  create(cate: CategoryPost) {
+    return this.http.post<CategoryPost>(`${apiUrl}`, cate);
   }
 
-  update(cate: categoryPost) {
-    return this.http.put<categoryPost[]>(`${apiUrl}/${cate.id}`, cate);
+  update(cate: CategoryPost) {
+    return this.http.put<CategoryPost>(`${apiUrl}/${cate.id}`, cate);
   }
 }

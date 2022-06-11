@@ -30,6 +30,10 @@ import { PostsFormComponent } from './pages/admin/post/posts-form/posts-form.com
 import { ProjectsFormComponent } from './pages/admin/project/projects-form/projects-form.component';
 import { ProfileComponent } from './pages/admin/profile/profile/profile.component';
 import { ProfileFormComponent } from './pages/admin/profile/profile-form/profile-form.component';
+import { CategoryProjectsComponent } from './pages/admin/category-project/category-projects/category-projects.component';
+import { CategoryProjectsFormComponent } from './pages/admin/category-project/category-projects-form/category-projects-form.component';
+import { CategoryPostsComponent } from './pages/admin/category-post/category-posts/category-posts.component';
+import { CategoryPostsFormComponent } from './pages/admin/category-post/category-posts-form/category-posts-form.component';
 
 registerLocaleData(en);
 
@@ -49,6 +53,10 @@ registerLocaleData(en);
     ProjectsFormComponent,
     PostsComponent,
     PostsFormComponent,
+    CategoryProjectsComponent,
+    CategoryProjectsFormComponent,
+    CategoryPostsComponent,
+    CategoryPostsFormComponent,
   ],
   imports: [
     BrowserModule,

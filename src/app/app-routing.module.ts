@@ -1,6 +1,10 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { AdminComponent } from './pages/admin/admin/admin.component';
+import { CategoryPostsFormComponent } from './pages/admin/category-post/category-posts-form/category-posts-form.component';
+import { CategoryPostsComponent } from './pages/admin/category-post/category-posts/category-posts.component';
+import { CategoryProjectsFormComponent } from './pages/admin/category-project/category-projects-form/category-projects-form.component';
+import { CategoryProjectsComponent } from './pages/admin/category-project/category-projects/category-projects.component';
 import { PostsFormComponent } from './pages/admin/post/posts-form/posts-form.component';
 import { PostsComponent } from './pages/admin/post/posts/posts.component';
 import { ProfileFormComponent } from './pages/admin/profile/profile-form/profile-form.component';
@@ -56,6 +60,22 @@ const routes: Routes = [
           { path: '', component: PostsComponent },
           { path: 'add', component: PostsFormComponent },
           { path: 'edit/:id', component: PostsFormComponent },
+        ],
+      },
+      {
+        path: 'categoryprojects',
+        children: [
+          { path: '', component: CategoryProjectsComponent },
+          { path: 'add', component: CategoryProjectsFormComponent },
+          { path: 'edit/:id', component: CategoryProjectsFormComponent },
+        ],
+      },
+      {
+        path: 'categoryposts',
+        children: [
+          { path: '', component: CategoryPostsComponent },
+          { path: 'add', component: CategoryPostsFormComponent },
+          { path: 'edit/:id', component: CategoryPostsFormComponent },
         ],
       },
     ],

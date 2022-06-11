@@ -17,8 +17,7 @@ export class BlogPageComponent implements OnInit {
   }
 
   onGetList() {
-    this.postService.getPostLimit(1, 2).subscribe((data) => {
-      console.log(data);
+    this.postService.getPosts().subscribe((data) => {
       this.posts = data;
     });
   }

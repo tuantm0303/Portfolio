@@ -30,39 +30,16 @@
     </div>
     <div class="row flex justify-between">
 
-      <div class="post h-[295px] w-[418px] bg-white">
+      <div *ngFor="let item of posts" class="post h-[295px] w-[418px] bg-white">
         <div class="content-post p-10">
           <h2 class="title-post text-2xl pb-2 text-[#21243D] font-bold hover:text-[#FF6464] hover:cursor-pointer">
-            Making a design system
-            from scratch</h2>
+            {{item.title}}</h2>
           <div class="date-and-category flex flex-wrap justify-between px-5 py-5">
-            <span class="date font-lg">12 Feb 2020</span>
+            <span class="date font-lg">{{item.createdAt}}</span>
             <span>|</span>
-            <span class="category-post font-lg">Design, Pattern</span>
+            <span class="category-post font-lg">{{item.categoryPostId}}</span>
           </div>
-          <p class="desc-post">
-            Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis
-            enim
-            velit mollit. Exercitation veniam consequat sunt nostrud amet.
-          </p>
-        </div>
-      </div>
-
-      <div class="post h-[295px] w-[418px] bg-white">
-        <div class="content-post p-10">
-          <h2 class="title-post text-2xl pb-2 text-[#21243D] font-bold hover:text-[#FF6464] hover:cursor-pointer">
-            Making a design system
-            from scratch</h2>
-          <div class="date-and-category flex flex-wrap justify-between px-5 py-5">
-            <span class="date font-lg">12 Feb 2020</span>
-            <span>|</span>
-            <span class="category-post font-lg">Design, Pattern</span>
-          </div>
-          <p class="desc-post">
-            Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis
-            enim
-            velit mollit. Exercitation veniam consequat sunt nostrud amet.
-          </p>
+          <p class="desc-post">{{item.desc}}</p>
         </div>
       </div>
 

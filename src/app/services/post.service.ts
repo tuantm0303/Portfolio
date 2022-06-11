@@ -1,11 +1,11 @@
-import { HttpClient } from '@angular/common/http';
-import { Injectable } from '@angular/core';
-import { Post } from '../models';
+import { HttpClient } from "@angular/common/http";
+import { Injectable } from "@angular/core";
+import { Post } from "../models";
 
-const apiUrl = 'http://localhost:3000/posts';
+const apiUrl = "http://localhost:3000/posts";
 
 @Injectable({
-  providedIn: 'root',
+  providedIn: "root",
 })
 export class PostService {
   constructor(private http: HttpClient) {}
@@ -16,6 +16,10 @@ export class PostService {
 
   getPost(id: Post) {
     return this.http.get<Post>(`${apiUrl}/${id}`);
+  }
+
+  getPostLimit(page: number, limit: number) {
+    return this.http.get<Post[]>(`${apiUrl}?_page=${page}&_limit=${limit}`);
   }
 
   removePost(id: number | string) {

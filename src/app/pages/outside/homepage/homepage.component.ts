@@ -1,27 +1,30 @@
-import { Component, OnInit } from '@angular/core';
-import { Profile, Project } from 'src/app/models';
-import { ProfileService } from 'src/app/services/profile.service';
-import { ProjectService } from 'src/app/services/project.service';
+import { Component, OnInit } from "@angular/core";
+import { Post, Profile, Project } from "src/app/models";
+import { PostService } from "src/app/services/post.service";
+import { ProfileService } from "src/app/services/profile.service";
+import { ProjectService } from "src/app/services/project.service";
 
 @Component({
-  selector: 'app-homepage',
-  templateUrl: './homepage.component.html',
-  styleUrls: ['./homepage.component.css'],
+  selector: "app-homepage",
+  templateUrl: "./homepage.component.html",
+  styleUrls: ["./homepage.component.css"],
 })
 export class HomepageComponent implements OnInit {
   profile: Profile = {
     id: 0,
-    fullname: '',
+    fullname: "",
     age: 0,
-    position: '',
-    about: '',
-    cv: '',
+    position: "",
+    about: "",
+    cv: "",
   };
 
+  posts!: Post[];
   projects!: Project[];
 
   constructor(
     private profileService: ProfileService,
+    private postService: PostService,
     private projectService: ProjectService
   ) {}
 
@@ -33,6 +36,11 @@ export class HomepageComponent implements OnInit {
     // profile
     this.profileService.getProfile().subscribe((data_profile) => {
       this.profile = data_profile;
+    });
+
+    //posts
+    this.postService.getPostLimit(1, 2).subscribe((data_posts) => {
+      this.posts = data_posts;
     });
 
     //projects

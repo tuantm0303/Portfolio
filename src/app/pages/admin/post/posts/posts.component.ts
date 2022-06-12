@@ -1,11 +1,11 @@
-import { Component, OnInit } from '@angular/core';
-import { Post } from 'src/app/models';
-import { PostService } from 'src/app/services/post.service';
+import { Component, OnInit } from "@angular/core";
+import { Post } from "src/app/models";
+import { PostService } from "src/app/services/post.service";
 
 @Component({
-  selector: 'app-posts',
-  templateUrl: './posts.component.html',
-  styleUrls: ['./posts.component.css'],
+  selector: "app-posts",
+  templateUrl: "./posts.component.html",
+  styleUrls: ["./posts.component.css"],
 })
 export class PostsComponent implements OnInit {
   posts!: Post[];
@@ -23,7 +23,7 @@ export class PostsComponent implements OnInit {
   }
 
   onRemove(id: number | string) {
-    if (window.confirm('Are you sure delete project??')) {
+    if (window.confirm("Are you sure delete project??")) {
       this.postService.removePost(id).subscribe(() => {
         this.onGetList();
       });

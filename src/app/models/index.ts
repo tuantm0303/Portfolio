@@ -13,7 +13,7 @@ export interface Project {
   img: string;
   createdAt: Date;
   updatedAt: Date;
-  categoryProjectId: string;
+  categoryProjectId: number;
   short_desc: string;
   desc: string;
 }
@@ -29,7 +29,7 @@ export interface Post {
   img: string;
   createdAt: Date;
   updatedAt: Date;
-  categoryPostId: string;
+  categoryPostId: number;
   short_desc: string;
   desc: string;
 }

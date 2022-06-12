@@ -27,7 +27,7 @@
       "desc": "hahahahhahahha"
     },
     {
-      "id": 4,
+      "id": 3,
       "name": "Project update sádfs",
       "img": "https://picsum.photos/500/500",
       "createdAt": "2022-06-10T04:16:28.672Z",
@@ -68,12 +68,53 @@
     },
     {
       "id": 3,
-      "title": "post 2",
-      "img": "https://picsum.photos/200/100",
-      "createdAt": "2022-06-09T16:02:46.958Z",
-      "categoryPostId": 2,
-      "short_desc": "short 2",
-      "desc": "description 2 sffa"
+      "title": "ewfadf",
+      "img": "ewsdf",
+      "createdAt": "2022-06-12T00:36:45.183Z",
+      "updatedAt": "2022-06-12T00:36:45.183Z",
+      "categoryPostId": "1",
+      "short_desc": "ef",
+      "desc": "erwbsfvf"
+    },
+    {
+      "id": 4,
+      "title": "fdsdssad",
+      "img": "ưssssssd",
+      "createdAt": "2022-06-12T01:02:04.862Z",
+      "updatedAt": "2022-06-12T01:02:04.862Z",
+      "categoryPostId": "2",
+      "short_desc": "sadasasd",
+      "desc": "ăeaweawe"
+    },
+    {
+      "id": 5,
+      "title": "sdádas",
+      "img": "adsad",
+      "createdAt": "2022-06-12T01:09:44.233Z",
+      "updatedAt": "2022-06-12T01:09:44.233Z",
+      "categoryPostId": "2",
+      "short_desc": "ádasda",
+      "desc": "adasdasdasds"
+    },
+    {
+      "id": 6,
+      "title": "aaaaaaaaa",
+      "img": "a",
+      "createdAt": "2022-06-12T01:15:46.911Z",
+      "updatedAt": "2022-06-12T01:15:46.911Z",
+      "categoryPostId": "1",
+      "short_desc": "aaaaaa",
+      "desc": "aaaaaaaaaaaaaaaaaa"
+    },
+    {
+      "id": 8,
+      "title": "aaaaa",
+      "img": "a",
+      "createdAt": "2022-06-12T01:21:26.433Z",
+      "updatedAt": "2022-06-12T01:21:26.433Z",
+      "categoryPostId": 1,
+      "short_desc": "aaaaaaaa",
+      "desc": "aaaaaaaaaaaaa"
     }
   ],
   "categoryPosts": [

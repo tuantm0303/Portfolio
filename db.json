@@ -2,12 +2,157 @@
   "profile": {
     "fullname": "Trịnh Minh Tuấn",
     "age": 21,
+    "avatar": "https://picsum.photos/500/500",
     "position": "Developer Frontend",
     "about": "You can’t rely on anyone these days, you gotta do everything yourself, don’t we? That’s ok, I came prepared, it’s a funny world we live in.",
     "cv": "Already have"
   },
-  "projects": [],
-  "categoryProjects": [],
-  "posts": [],
-  "categoryPosts": []
+  "projects": [
+    {
+      "id": 1,
+      "name": "Portfolio",
+      "img": "https://picsum.photos/300/200",
+      "createdAt": "2022-06-13T12:36:26.970Z",
+      "updatedAt": "2022-06-13T12:36:26.970Z",
+      "categoryProjectId": 4,
+      "short_desc": "Portfolio cá nhân",
+      "desc": "Portfolio cá nhân viết bằng Angular có sử dụng Angular, TailwindCSS, Ant Design"
+    },
+    {
+      "id": 2,
+      "name": "Website bán điện thoại",
+      "img": "https://picsum.photos/300/200",
+      "createdAt": "2022-06-13T12:53:56.915Z",
+      "updatedAt": "2022-06-13T12:53:56.915Z",
+      "categoryProjectId": 5,
+      "short_desc": "Web bán hàng viết bằng ReactTS",
+      "desc": "Web bán hàng viết bằng ReactTS có sử dụng TailWindCSS, có database là NodeJS"
+    },
+    {
+      "id": 3,
+      "name": "Web bán quần áo",
+      "img": "https://picsum.photos/300/200",
+      "createdAt": "2022-06-13T12:54:53.514Z",
+      "updatedAt": "2022-06-13T12:54:53.514Z",
+      "categoryProjectId": 3,
+      "short_desc": "Web bán quần áo bằng ES 6",
+      "desc": "Web bán quần áo bằng ES 6, TailWindCSS"
+    },
+    {
+      "id": 4,
+      "name": "Database website bán điện thoại",
+      "img": "https://picsum.photos/300/200",
+      "createdAt": "2022-06-13T12:56:51.567Z",
+      "updatedAt": "2022-06-13T12:56:51.567Z",
+      "categoryProjectId": 6,
+      "short_desc": "Database website bán điện thoại dùng Node JS",
+      "desc": "Database website bán điện thoại dùng Node JS, Robo3T, express, MongoDB"
+    },
+    {
+      "id": 5,
+      "name": "Netflix",
+      "img": "https://picsum.photos/300/200",
+      "createdAt": "2022-06-13T17:21:51.774Z",
+      "updatedAt": "2022-06-13T17:21:51.774Z",
+      "categoryProjectId": 2,
+      "short_desc": "Clone Netflix",
+      "desc": "Clone Netflix viết bằng React JS, firebase"
+    },
+    {
+      "id": 6,
+      "name": "TikTok",
+      "img": "https://picsum.photos/300/200",
+      "createdAt": "2022-06-13T17:25:56.054Z",
+      "updatedAt": "2022-06-13T17:25:56.054Z",
+      "categoryProjectId": 2,
+      "short_desc": "Clone TikTok",
+      "desc": "Clone TikTok viết bằng React JS, SCSS, axios "
+    }
+  ],
+  "categoryProjects": [
+    {
+      "id": 1,
+      "name": "Javascript"
+    },
+    {
+      "id": 2,
+      "name": "React"
+    },
+    {
+      "id": 3,
+      "name": "ECMA & JS Advanced"
+    },
+    {
+      "id": 4,
+      "name": "Angular"
+    },
+    {
+      "id": 5,
+      "name": "React Typescript"
+    },
+    {
+      "id": 6,
+      "name": "Node JS"
+    }
+  ],
+  "posts": [
+    {
+      "id": 1,
+      "title": "Liên Minh Huyền Thoại",
+      "img": "https://picsum.photos/200/300",
+      "createdAt": "2022-06-13T16:59:49.513Z",
+      "updatedAt": "2022-06-13T16:59:49.513Z",
+      "categoryPostId": 1,
+      "short_desc": "Content Liên Minh Huyền Thoại",
+      "desc": "“Như một thói quen”, mỗi khi ra mắt loạt trang phục mới trong Liên Minh Huyền Thoại thì Riot Games thường hé lộ những sự kiện đi kèm với hi vọng sẽ gia tăng doanh số bán hàng. Garena cũng vậy, nhà phát hành LMHT VN cũng thường xuyên làm content về những trang phục mới để “kích cầu”"
+    },
+    {
+      "id": 2,
+      "title": "Laptop Gaming",
+      "img": "https://picsum.photos/200/300",
+      "createdAt": "2022-06-13T17:02:32.350Z",
+      "updatedAt": "2022-06-13T17:02:32.350Z",
+      "categoryPostId": 2,
+      "short_desc": "Content Laptop",
+      "desc": "Laptop Gaming MSI Katana GF66 11UC-698VN trang bị vi xử lí Intel Core i7 thế hệ 11 với 8 nhân cùng card đồ họa NVIDIA GeForce RTX 30 series, được thiết kế tối ưu để phát huy trọn vẹn sức mạnh khi chơi game và cho hiệu năng cao hơn tối đa tới 40% so với thế hệ trước"
+    },
+    {
+      "id": 3,
+      "title": "SmartPhone",
+      "img": "https://picsum.photos/200/300",
+      "createdAt": "2022-06-13T17:08:58.139Z",
+      "updatedAt": "2022-06-13T17:08:58.139Z",
+      "categoryPostId": 3,
+      "short_desc": "Content SmartPhone",
+      "desc": "Samsung Galaxy S22 ra mắt với diện mạo vô cùng tinh tế và trẻ trung, mang trong mình thiết kế phẳng theo xu hướng thịnh hành, màn hình 120 Hz mượt mà, cụm camera AI 50 MP và bộ xử lý đến từ Qualcomm"
+    },
+    {
+      "id": 4,
+      "title": "Ai muốn nghe không?",
+      "img": "https://picsum.photos/200/300",
+      "createdAt": "2022-06-13T17:11:03.008Z",
+      "updatedAt": "2022-06-13T17:11:03.008Z",
+      "categoryPostId": 4,
+      "short_desc": "Nhạc của Đen",
+      "desc": "Đêm nay không ở nhà, không ở trên giường ngủ Babe I’m back, lại đi về trên con đường cũ  Cảm giác thân thuộc, không giống như một người qua đường Vì Oldschool là nơi ta học mãi nhưng lười ra trường Nhạc này là nhạc của đêm, của mấy người thường chỉ đợi Đợi cho ngày tàn đêm xuống, bắt đầu nằm và nghĩ ngợi Nhạc của mấy thằng già cỗi, nhưng vẫn không thôi mơ"
+    }
+  ],
+  "categoryPosts": [
+    {
+      "id": 1,
+      "name": "Game"
+    },
+    {
+      "id": 2,
+      "name": "Laptop"
+    },
+    {
+      "id": 3,
+      "name": "Điện thoại"
+    },
+    {
+      "id": 4,
+      "name": "Nhạc"
+    }
+  ]
 }

@@ -6,17 +6,15 @@
     <nz-form-item>
       <nz-form-label [nzSpan]="6" nzFor="title">Title</nz-form-label>
       <nz-form-control [nzSpan]="14">
-        <input nz-input name="title" type="text" id="title" [(ngModel)]="post.title" #name="ngModel"
-          required minlength="5">
+        <input nz-input name="title" type="text" id="title" [(ngModel)]="post.title" #name="ngModel" required
+          minlength="5">
       </nz-form-control>
       <!-- validation -->
       <div class="alert pl-2">
-        <div *ngIf="name.errors?.['required'] && (name.dirty || name.touched)"
-          class="alert-required">
+        <div *ngIf="name.errors?.['required'] && (name.dirty || name.touched)" class="alert-required">
           <nz-alert nzType="error" nzMessage="This is required"></nz-alert>
         </div>
-        <div *ngIf="name.errors?.['minlength'] && (name.dirty || name.touched)"
-          class="alert-minlenght">
+        <div *ngIf="name.errors?.['minlength'] && (name.dirty || name.touched)" class="alert-minlenght">
           <nz-alert nzType="error" nzMessage="Lenght > 5"></nz-alert>
         </div>
       </div>
@@ -24,13 +22,11 @@
     <nz-form-item>
       <nz-form-label [nzSpan]="6" nzFor="img">Images</nz-form-label>
       <nz-form-control [nzSpan]="14">
-        <input nz-input name="img" type="text" id="img" [(ngModel)]="post.img" #name="ngModel"
-          required>
+        <input nz-input name="img" type="text" id="img" [(ngModel)]="post.img" #name="ngModel" required>
       </nz-form-control>
       <!-- validation -->
       <div class="alert pl-2">
-        <div *ngIf="name.errors?.['required'] && (name.dirty || name.touched)"
-          class="alert-required">
+        <div *ngIf="name.errors?.['required'] && (name.dirty || name.touched)" class="alert-required">
           <nz-alert nzType="error" nzMessage="This is required"></nz-alert>
         </div>
       </div>
@@ -38,8 +34,7 @@
     <nz-form-item>
       <nz-form-label [nzSpan]="6" nzFor="categoryPostId">Category Post</nz-form-label>
       <nz-form-control [nzSpan]="14">
-        <select class="selector" name="categoryPostId" [(ngModel)]="post.categoryPostId"
-          #name="ngModel" required>
+        <select class="selector" name="categoryPostId" [(ngModel)]="post.categoryPostId" #name="ngModel" required>
           <option class="option" value="">Select Catetegories</option>
           <option class="option" *ngFor="let itemCate of catePost" value={{itemCate.id}}>
             {{itemCate.name}}</option>
@@ -47,8 +42,7 @@
       </nz-form-control>
       <!-- validation -->
       <div class=" alert pl-2">
-        <div *ngIf="name.errors?.['required'] && (name.dirty || name.touched)"
-          class="alert-required">
+        <div *ngIf="name.errors?.['required'] && (name.dirty || name.touched)" class="alert-required">
           <nz-alert nzType="error" nzMessage="This is required"></nz-alert>
         </div>
       </div>
@@ -56,13 +50,12 @@
     <nz-form-item>
       <nz-form-label [nzSpan]="6" nzFor="short_desc">Short Description</nz-form-label>
       <nz-form-control [nzSpan]="14">
-        <input nz-input name="short_desc" type="text" id="short_desc" [(ngModel)]="post.short_desc"
-          #name="ngModel" required>
+        <input nz-input name="short_desc" type="text" id="short_desc" [(ngModel)]="post.short_desc" #name="ngModel"
+          required>
       </nz-form-control>
       <!-- validation -->
       <div class="alert pl-2">
-        <div *ngIf="name.errors?.['required'] && (name.dirty || name.touched)"
-          class="alert-required">
+        <div *ngIf="name.errors?.['required'] && (name.dirty || name.touched)" class="alert-required">
           <nz-alert nzType="error" nzMessage="This is required"></nz-alert>
         </div>
       </div>
@@ -70,20 +63,18 @@
     <nz-form-item>
       <nz-form-label [nzSpan]="6" nzFor="desc">Description</nz-form-label>
       <nz-form-control [nzSpan]="14">
-        <input nz-input name="desc" type="text" id="desc" [(ngModel)]="post.desc" #name="ngModel"
-          required>
+        <textarea nz-input name="desc" type="text" id="desc" [(ngModel)]="post.desc" #name="ngModel"
+          required></textarea>
       </nz-form-control>
       <!-- validation -->
       <div class="alert pl-2">
-        <div *ngIf="name.errors?.['required'] && (name.dirty || name.touched)"
-          class="alert-required">
+        <div *ngIf="name.errors?.['required'] && (name.dirty || name.touched)" class="alert-required">
           <nz-alert nzType="error" nzMessage="This is required"></nz-alert>
         </div>
       </div>
     </nz-form-item>
     <div class="btn-click">
-      <button [disabled]="!formSubmit.valid" nz-button nzType="primary" nzSize="large"
-        nzAlign="end">
+      <button [disabled]="!formSubmit.valid" nz-button nzType="primary" nzSize="large" nzAlign="end">
         Submit
       </button>
     </div>

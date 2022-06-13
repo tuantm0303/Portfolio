@@ -64,7 +64,8 @@
     <nz-form-item>
       <nz-form-label [nzSpan]="6" nzFor="desc">Description</nz-form-label>
       <nz-form-control [nzSpan]="14">
-        <input nz-input name="desc" type="text" id="desc" [(ngModel)]="project.desc" #name="ngModel" required>
+        <textarea nz-input name="desc" type="text" id="desc" [(ngModel)]="project.desc" #name="ngModel"
+          required></textarea>
       </nz-form-control>
       <!-- validation -->
       <div class="alert pl-2">

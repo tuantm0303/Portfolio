@@ -31,7 +31,7 @@ const routes: Routes = [
         component: WorksPageComponent,
       },
       {
-        path: "posts",
+        path: "blog",
         component: BlogPageComponent,
       },
       {

@@ -7,7 +7,7 @@
       <nz-form-label [nzSpan]="6" nzFor="name">Name</nz-form-label>
       <nz-form-control [nzSpan]="14">
         <input nz-input name="name" type="text" id="name" [(ngModel)]="catePost.name" #name="ngModel" required
-          minlength="5">
+          minlength="3">
       </nz-form-control>
 
       <!-- validation -->
@@ -16,7 +16,7 @@
           <nz-alert nzType="error" nzMessage="This is required"></nz-alert>
         </div>
         <div *ngIf="name.errors?.['minlength'] && (name.dirty || name.touched)" class="alert-minlenght">
-          <nz-alert nzType="error" nzMessage="Lenght > 5"></nz-alert>
+          <nz-alert nzType="error" nzMessage="Lenght > 3"></nz-alert>
         </div>
       </div>
     </nz-form-item>

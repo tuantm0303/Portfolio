@@ -33,4 +33,18 @@ export class PostService {
   updatePost(post: Post) {
     return this.http.put<Post>(`${apiUrl}/${post.id}`, post);
   }
+
+  getCateofPost() {
+    return this.http.get<Post[]>(`${apiUrl}?_expand=categoryPost`);
+  }
+
+  getCateofPostId(id: number | string) {
+    return this.http.get<Post>(`${apiUrl}/${id}?_expand=categoryPost`);
+  }
+
+  getCateofPostandLimit(page: number, limit: number) {
+    return this.http.get<Post[]>(
+      `${apiUrl}?_expand=categoryPost&_page=${page}&_limit=${limit}`
+    );
+  }
 }

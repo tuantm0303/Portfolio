@@ -1,5 +1,4 @@
 import { Component, OnInit } from "@angular/core";
-import { CategoryProject } from "src/app/models";
 import { ProjectService } from "src/app/services/project.service";
 
 @Component({
@@ -9,7 +8,6 @@ import { ProjectService } from "src/app/services/project.service";
 })
 export class WorksPageComponent implements OnInit {
   projects!: any;
-  cateProject!: CategoryProject[];
 
   constructor(private projectService: ProjectService) {}
 

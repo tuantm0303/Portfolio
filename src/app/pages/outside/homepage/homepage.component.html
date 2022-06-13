@@ -35,10 +35,10 @@
         <div class="content-post p-10">
           <h2 class="title-post text-2xl pb-2 text-[#21243D] font-bold hover:text-[#FF6464] hover:cursor-pointer">
             {{item.title}}</h2>
-          <div class="date-and-category flex flex-wrap justify-between px-5 py-5">
+          <div class="date-and-category flex flex-wrap justify-between py-5">
             <span class="date font-lg">{{item.createdAt}}</span>
-            <span>|</span>
-            <span class="category-post font-lg">{{item.categoryPostId}}</span>
+            <span class="px-2">|</span>
+            <span class="category-post font-lg">{{item.categoryPost.name}}</span>
           </div>
           <p class="desc-post">{{item.desc}}</p>
         </div>
@@ -66,7 +66,7 @@
             {{project.name}}</h2>
           <div class="year-and-category flex justify-start py-4">
             <span class="createdAt rounded-3xl bg-[#21243D] px-5 text-white text-sm w-fit">{{project.createdAt}}</span>
-            <span class="category-featrured text-[#8695A4] pl-2 text-sm">{{project.categoryProjectId}}</span>
+            <span class="category-featrured text-[#8695A4] pl-2 text-sm">{{project.categoryProject.name}}</span>
           </div>
           <p class="desc-featrured text-base text-[#21243D] leading-6">{{project.desc}}</p>
         </div>

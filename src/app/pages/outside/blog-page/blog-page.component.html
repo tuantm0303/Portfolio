@@ -10,10 +10,10 @@
           <div class="content-post py-10">
             <h2 class="title-post text-2xl pb-2 text-[#21243D] font-bold hover:text-[#FF6464] hover:cursor-pointer">
               {{item.title}}</h2>
-            <div class="date-and-category w-72 flex flex-wrap justify-between py-5">
+            <div class="date-and-category flex flex-wrap justify-between py-5">
               <span class="date font-lg">{{item.createdAt}}</span>
-              <span>|</span>
-              <span class="category-post font-lg">{{item.categoryPostId}}</span>
+              <span class="px-2">|</span>
+              <span class="category-post font-lg">{{item.categoryPost.name}}</span>
             </div>
             <p class="desc-post">{{item.desc}}.</p>
           </div>

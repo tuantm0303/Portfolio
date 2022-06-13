@@ -41,4 +41,10 @@ export class ProjectService {
   getCateofProjectId(id: number | string) {
     return this.http.get<Project>(`${apiUrl}/${id}?_expand=categoryProject`);
   }
+
+  getCateofPostandLimit(page: number, limit: number) {
+    return this.http.get<Project[]>(
+      `${apiUrl}?_expand=categoryProject&_page=${page}&_limit=${limit}`
+    );
+  }
 }

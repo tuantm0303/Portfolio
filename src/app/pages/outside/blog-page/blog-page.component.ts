@@ -8,7 +8,7 @@ import { PostService } from "src/app/services/post.service";
   styleUrls: ["./blog-page.component.css"],
 })
 export class BlogPageComponent implements OnInit {
-  posts!: Post[];
+  posts!: any;
 
   constructor(private postService: PostService) {}
 
@@ -17,7 +17,7 @@ export class BlogPageComponent implements OnInit {
   }
 
   onGetList() {
-    this.postService.getPosts().subscribe((data) => {
+    this.postService.getCateofPost().subscribe((data) => {
       this.posts = data;
     });
   }

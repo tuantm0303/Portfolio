@@ -1,6 +1,7 @@
 import { Component, OnInit } from "@angular/core";
 import { ActivatedRoute, Router } from "@angular/router";
-import { Project } from "src/app/models";
+import { CategoryProject, Project } from "src/app/models";
+import { CategoryProjectService } from "src/app/services/category-project.service";
 import { ProjectService } from "src/app/services/project.service";
 
 @Component({
@@ -19,11 +20,13 @@ export class ProjectsFormComponent implements OnInit {
     short_desc: "",
     desc: "",
   };
+  cateProjects!: CategoryProject[];
 
   constructor(
     private projectService: ProjectService,
     private router: Router,
-    private activeRouter: ActivatedRoute
+    private activeRouter: ActivatedRoute,
+    private projectCateProject: CategoryProjectService
   ) {}
 
   ngOnInit(): void {
@@ -31,18 +34,36 @@ export class ProjectsFormComponent implements OnInit {
     this.projectService.getProject(id).subscribe((data) => {
       this.project = data;
     });
+
+    this.getCate();
+  }
+
+  getCate() {
+    this.projectCateProject.getAll().subscribe((data) => {
+      this.cateProjects = data;
+    });
   }
 
   submitForm() {
     const id = this.activeRouter.snapshot.params["id"];
     if (id) {
-      this.projectService.updateProject(this.project).subscribe((data) => {
-        this.router.navigateByUrl("admin/projects");
-      });
+      this.projectService
+        .updateProject({
+          ...this.project,
+          categoryProjectId: +this.project.categoryProjectId,
+        })
+        .subscribe((data) => {
+          this.router.navigateByUrl("admin/projects");
+        });
     }
 
-    this.projectService.createProject(this.project).subscribe((data) => {
-      this.router.navigateByUrl("admin/projects");
-    });
+    this.projectService
+      .createProject({
+        ...this.project,
+        categoryProjectId: +this.project.categoryProjectId,
+      })
+      .subscribe((data) => {
+        this.router.navigateByUrl("admin/projects");
+      });
   }
 }

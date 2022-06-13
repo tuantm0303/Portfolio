@@ -32,10 +32,14 @@
       </div>
     </nz-form-item>
     <nz-form-item>
-      <nz-form-label [nzSpan]="6" nzFor="categoryProjectId">Category Post</nz-form-label>
+      <nz-form-label [nzSpan]="6" nzFor="categoryProjectId">Category Project</nz-form-label>
       <nz-form-control [nzSpan]="14">
-        <input nz-input name="categoryProjectId" type="number" id="categoryProjectId"
-          [(ngModel)]="project.categoryProjectId" #name="ngModel" required>
+        <select class="selector" name="categoryProjectId" [(ngModel)]="project.categoryProjectId" #name="ngModel"
+          required>
+          <option class="option" value="">Select Catetegories</option>
+          <option class="option" *ngFor="let itemCate of cateProjects" value={{itemCate.id}}>
+            {{itemCate.name}}</option>
+        </select>
       </nz-form-control>
       <!-- validation -->
       <div class="alert pl-2">

@@ -50,12 +50,13 @@ export class PostsFormComponent implements OnInit {
   submitForm() {
     const id = this.activeRoute.snapshot.params["id"];
     if (id) {
-      this.postService.updatePost(this.post).subscribe((data) => {
-        this.router.navigateByUrl("admin/posts");
-      });
+      this.postService
+        .updatePost({ ...this.post, categoryPostId: +this.post.categoryPostId })
+        .subscribe((data) => {
+          this.router.navigateByUrl("admin/posts");
+        });
     }
 
-    console.log(+this.post.categoryPostId);
     this.postService
       .createPost({ ...this.post, categoryPostId: +this.post.categoryPostId })
       .subscribe((data) => {

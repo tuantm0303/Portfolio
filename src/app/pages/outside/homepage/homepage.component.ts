@@ -19,8 +19,8 @@ export class HomepageComponent implements OnInit {
     cv: "",
   };
 
-  posts!: Post[];
-  projects!: Project[];
+  posts!: any;
+  projects!: any;
 
   constructor(
     private profileService: ProfileService,
@@ -39,13 +39,15 @@ export class HomepageComponent implements OnInit {
     });
 
     //posts
-    this.postService.getPostLimit(1, 2).subscribe((data_posts) => {
+    this.postService.getCateofPostandLimit(1, 2).subscribe((data_posts) => {
       this.posts = data_posts;
     });
 
     //projects
-    this.projectService.getProjectLimit(1, 3).subscribe((data_projects) => {
-      this.projects = data_projects;
-    });
+    this.projectService
+      .getCateofPostandLimit(1, 3)
+      .subscribe((data_projects) => {
+        this.projects = data_projects;
+      });
   }
 }

@@ -14,6 +14,7 @@ export class HomepageComponent implements OnInit {
     id: 0,
     fullname: "",
     age: 0,
+    avatar: "",
     position: "",
     about: "",
     cv: "",

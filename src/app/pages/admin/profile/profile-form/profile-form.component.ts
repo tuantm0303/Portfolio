@@ -1,21 +1,22 @@
-import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute, Router } from '@angular/router';
-import { Profile } from 'src/app/models';
-import { ProfileService } from 'src/app/services/profile.service';
+import { Component, OnInit } from "@angular/core";
+import { ActivatedRoute, Router } from "@angular/router";
+import { Profile } from "src/app/models";
+import { ProfileService } from "src/app/services/profile.service";
 
 @Component({
-  selector: 'app-profile-form',
-  templateUrl: './profile-form.component.html',
-  styleUrls: ['./profile-form.component.css'],
+  selector: "app-profile-form",
+  templateUrl: "./profile-form.component.html",
+  styleUrls: ["./profile-form.component.css"],
 })
 export class ProfileFormComponent implements OnInit {
   profile: Profile = {
     id: 0,
-    fullname: '',
+    fullname: "",
     age: 0,
-    position: '',
-    about: '',
-    cv: '',
+    avatar: "",
+    position: "",
+    about: "",
+    cv: "",
   };
   constructor(private profileService: ProfileService, private route: Router) {}
 
@@ -27,7 +28,7 @@ export class ProfileFormComponent implements OnInit {
 
   submitForm() {
     this.profileService.updateProfile(this.profile).subscribe((data) => {
-      this.route.navigateByUrl('admin/profile');
+      this.route.navigateByUrl("admin/profile");
     });
   }
 }

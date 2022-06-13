@@ -16,6 +16,12 @@
       </nz-form-control>
     </nz-form-item>
     <nz-form-item>
+      <nz-form-label [nzSpan]="6" nzFor="avatar">Avatar</nz-form-label>
+      <nz-form-control [nzSpan]="14">
+        <input nz-input name="avatar" type="text" id="avatar" [(ngModel)]="profile.avatar">
+      </nz-form-control>
+    </nz-form-item>
+    <nz-form-item>
       <nz-form-label [nzSpan]="6" nzFor="position">Position</nz-form-label>
       <nz-form-control [nzSpan]="14">
         <input nz-input name="position" type="text" id="position" [(ngModel)]="profile.position">
